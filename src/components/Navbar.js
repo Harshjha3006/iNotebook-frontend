@@ -18,8 +18,9 @@ export default function Navbar() {
           <Link className={`nav-link ${location.pathname === '/'?'active':""}`} aria-current="page" to="/">Home</Link>
         </li>
       </ul>
-      
     </div>
+    <Link className="btn btn-primary mx-2" to="/login" role="button">Login</Link>
+    <Link className="btn btn-primary mx-2" to="/signup" role="button">Signup</Link>
   </div>
 </nav> 
     </>

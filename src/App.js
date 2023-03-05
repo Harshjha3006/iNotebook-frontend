@@ -7,6 +7,8 @@ import {
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import NoteState from './context/NoteState';
+import Signup from './components/Signup';
+import Login from './components/Login';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
     <Navbar/>
       <Routes>
         <Route exact path = "/" element = {<Home/>}></Route>
+        <Route exact path = "/login" element = {<Login/>}></Route>
+        <Route exact path = "/signup" element = {<Signup/>}></Route>
       </Routes>
       </NoteState>
     </Router>
