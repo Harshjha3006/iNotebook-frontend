@@ -7,6 +7,7 @@ const AddNote = () => {
           setNote({...note,[event.target.name] : event.target.value})
     }
     const handleSubmit = (e)=>{
+        setNote({title : "",description : "",tag : ""})
         addNote(note.title,note.description,note.tag);
     }
   return (
@@ -18,6 +19,7 @@ const AddNote = () => {
             <label htmlFor="title">title</label>
             <input
               onChange = {handleChange}
+              value = {note.title}
               type="text"
               className="form-control"
               id="title"
@@ -30,6 +32,7 @@ const AddNote = () => {
             <label htmlFor="desc">Description</label>
             <input
             onChange = {handleChange}
+            value = {note.description}
               type="text"
               className="form-control"
               id="description"
@@ -42,6 +45,7 @@ const AddNote = () => {
             <input
               type="text"
               onChange = {handleChange}
+              value = {note.tag}
               className="form-control"
               id="Tag"
               name = "tag"
@@ -49,7 +53,7 @@ const AddNote = () => {
               placeholder="Enter tag"
             />
           </div>
-          <button onClick = {handleSubmit} type="submit" className="btn btn-primary">
+          <button disabled = {note.title.length < 3 || note.description.length < 5} onClick = {handleSubmit} type="submit" className="btn btn-primary">
             Add Note
           </button>
         </form>

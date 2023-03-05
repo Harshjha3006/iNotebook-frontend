@@ -96,7 +96,7 @@ const Notes = () => {
               </form>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-primary" onClick = {handleUpdate}>
+              <button disabled = {note.title.length < 3 || note.description.length < 5} type="button" className="btn btn-primary" onClick = {handleUpdate}>
                 Save changes
               </button>
             </div>
