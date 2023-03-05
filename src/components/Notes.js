@@ -66,6 +66,8 @@ const Notes = () => {
                     name="title"
                     aria-describedby="emailHelp"
                     placeholder="Enter title"
+                    minLength={3}
+                    required
                   />
                 </div>
                 <div className="form-group my-3">
@@ -78,6 +80,8 @@ const Notes = () => {
                     id="description"
                     name="description"
                     placeholder="Enter description"
+                    minLength={5}
+                    required
                   />
                 </div>
                 <div className="form-group my-3">
