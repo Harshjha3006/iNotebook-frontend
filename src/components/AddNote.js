@@ -7,7 +7,6 @@ const AddNote = () => {
           setNote({...note,[event.target.name] : event.target.value})
     }
     const handleSubmit = (e)=>{
-        e.preventDefault();
         addNote(note.title,note.description,note.tag);
     }
   return (
@@ -51,7 +50,7 @@ const AddNote = () => {
             />
           </div>
           <button onClick = {handleSubmit} type="submit" className="btn btn-primary">
-            Submit
+            Add Note
           </button>
         </form>
       </div>
