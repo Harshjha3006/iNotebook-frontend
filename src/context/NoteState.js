@@ -36,6 +36,7 @@ const NoteState = (props) => {
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiaGFyc2gzMGpoYUBnbWFpbC5jb20ifSwiaWF0IjoxNjc2MzUzMTU0fQ.TfkptkICF35Lpd3wlRBiG8VwcknlY8QJ0uUX8l_-UXA",
         }
       });
+      props.showAlert("Note deleted successfully","success");
     getNotes();
   };
   const editNote = async (title,description,tag,id) =>{

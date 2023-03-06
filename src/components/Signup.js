@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-const Signup = () => {
+const Signup = (props) => {
     const [creds,setCreds] = React.useState({name : "",email : "",password : ""});
     const navigate = useNavigate();
     const handleChange = (event)=>{
         setCreds({...creds,[event.target.name] : event.target.value});
     }
-    const handleSubmit = async ()=>{
+    const handleSubmit = async (e)=>{
+          e.preventDefault();
           const {name,email,password} = creds;
           const response = await fetch('http://localhost:5000/auth/createUser',{
             method : 'POST',
@@ -19,10 +20,11 @@ const Signup = () => {
           console.log(json);
           if(json.success){
             localStorage.setItem('token',json.authToken);
+            props.showAlert("User Account Created successfully","success");
             navigate("/");
           }
           else{
-            alert("User Already exists");
+            props.showAlert("Invalid Input","danger");
           }
     }
   return (
