@@ -1,7 +1,9 @@
 import NoteContext from "../context/NoteContext"
 import { useContext,useEffect,useRef,useState } from "react"
 import NoteItem from "./NoteItem";
+import { useNavigate } from "react-router-dom";
 const Notes = (props) => {
+  const navigate = useNavigate();
   const [note, setNote] = useState({ id : "",title: "", description: "", tag: "" });
   const { editNote ,ref} = useContext(NoteContext);
   const refClose = useRef(null);
@@ -17,12 +19,19 @@ const Notes = (props) => {
     editNote(note.title,note.description,note.tag,note.id);
     props.showAlert("Note Updated Successfully","success");
   }
-    const {notes,getNotes,setNotes} = useContext(NoteContext);
+    const {notes,getNotes} = useContext(NoteContext);
     useEffect(()=>{
+      if(localStorage.getItem('token')){
         getNotes();
+      }
+      else{
+        navigate('/login');
+      }
+      //eslint-disable-next-line
     },[]);
   return (
     <>
+  <h2 className='text-center'>Your Notes</h2>
     <button
         type="button"
         ref = {ref}
@@ -109,9 +118,11 @@ const Notes = (props) => {
         </div>
       </div>
     <div className = "row my-3">
-      {notes.map(element =>{
+      {notes.length >= 1?notes.map(element =>{
         return <NoteItem key = {element.title} note = {element} updateNote = {updateNote}/>
-      })}
+      }):
+      <div className="container"><h6 className="text-center my-4">No Notes To Display</h6></div>
+      }
     </div>
     </>
   )

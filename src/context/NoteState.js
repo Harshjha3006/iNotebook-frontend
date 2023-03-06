@@ -9,11 +9,11 @@ const NoteState = (props) => {
       method: "GET",
       headers: {
         "Authorization":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiaGFyc2gzMGpoYUBnbWFpbC5jb20ifSwiaWF0IjoxNjc2MzUzMTU0fQ.TfkptkICF35Lpd3wlRBiG8VwcknlY8QJ0uUX8l_-UXA",
+          localStorage.getItem('token'),
       }
     });
     const json = await response.json();
-    setNotes(json);
+    setNotes(json);   
   };
   const addNote = async (title, description, tag) => {
     const response = await fetch(`${host}/notes/addNote`, {
@@ -21,19 +21,21 @@ const NoteState = (props) => {
         headers: {
         "Content-Type": "application/json",
         "Authorization":
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiaGFyc2gzMGpoYUBnbWFpbC5jb20ifSwiaWF0IjoxNjc2MzUzMTU0fQ.TfkptkICF35Lpd3wlRBiG8VwcknlY8QJ0uUX8l_-UXA",
+            localStorage.getItem('token')
         },
         body : JSON.stringify({title,description,tag})
       });
+      //eslint-disable-next-line
       const json = await response.json();
       getNotes();
   };
   const deleteNote = async (id) => {
+    //eslint-disable-next-line
     const response = await fetch(`${host}/notes/deleteNote/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization":
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiaGFyc2gzMGpoYUBnbWFpbC5jb20ifSwiaWF0IjoxNjc2MzUzMTU0fQ.TfkptkICF35Lpd3wlRBiG8VwcknlY8QJ0uUX8l_-UXA",
+            localStorage.getItem('token'),
         }
       });
       props.showAlert("Note deleted successfully","success");
@@ -46,7 +48,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type" : "application/json",
         "Authorization":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiaGFyc2gzMGpoYUBnbWFpbC5jb20ifSwiaWF0IjoxNjc2MzUzMTU0fQ.TfkptkICF35Lpd3wlRBiG8VwcknlY8QJ0uUX8l_-UXA",
+          localStorage.getItem('token'),
       },
       body : JSON.stringify({title,description,tag})
     });
