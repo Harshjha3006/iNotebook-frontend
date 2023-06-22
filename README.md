@@ -29,15 +29,15 @@
 <br />
 <div align="center">
 
-<h3 align="center">iNotebook</h3>
+<h3 align="center">INotebook</h3>
 
   <p align="center">
     Store your personalised notes in a secure manner with iNotebook
     <br />
     <br />
-    <a href="https://github.com/Harshjha3006/QuickCompete/issues">Report Bug</a>
+    <a href="https://github.com/Harshjha3006/iNotebook-frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Harshjha3006/QuickCompete/issues">Request Feature</a>
+    <a href="https://github.com/Harshjha3006/iNotebook-frontend/issues">Request Feature</a>
   </p>
 </div>
 
@@ -102,13 +102,15 @@ This is an example of how to list things you need to use the software and how to
 - [npm](https://www.npmjs.com/)
   - You'll know you've installed npm right if you can run:
     - `npm --version` and get an output like : `9.6.2`
+- Start the backend
+  - For detailed instructions view the backend Repository : [https://github.com/Harshjha3006/iNotebook-backend](https://github.com/Harshjha3006/iNotebook-backend)
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Harshjha3006/QuickCompete.git
-   cd QuickCompete
+   git clone https://github.com/Harshjha3006/iNotebook-frontend.git
+   cd iNotebook-frontend
    ```
 2. Install NPM packages
    ```sh
@@ -125,12 +127,12 @@ This is an example of how to list things you need to use the software and how to
 
 ## How To Use
 
-Here's a demo video showing how you can use QuickCompete:
+Here's a demo video showing how you can use INotebook:
 
 ### Demo Video
 
 <br>
-<img src = "./src/img/demo.gif" width = "700",height = "700"></img>
+<img src = "./src/images/demo.gif" width = "700",height = "700"></img>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +163,7 @@ Don't forget to give the project a star! Thanks again!
 
 Harsh Jha - harsh30jha@gmail.com
 
-Project Link: [https://github.com/Harshjha3006/QuickCompete](https://github.com/Harshjha3006/QuickCompete)
+Project Link: [https://github.com/Harshjha3006/iNotebook-frontend](https://github.com/Harshjha3006/iNotebook-frontend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,16 +174,16 @@ Project Link: [https://github.com/Harshjha3006/QuickCompete](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Harshjha3006/QuickCompete.svg?style=for-the-badge
-[contributors-url]: https://github.com/Harshjha3006/QuickCompete/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Harshjha3006/QuickCompete.svg?style=for-the-badge
-[forks-url]: https://github.com/Harshjha3006/QuickCompete/network/members
-[stars-shield]: https://img.shields.io/github/stars/Harshjha3006/QuickCompete.svg?style=for-the-badge
-[stars-url]: https://github.com/Harshjha3006/QuickCompete/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Harshjha3006/QuickCompete.svg?style=for-the-badge
-[issues-url]: https://github.com/Harshjha3006/QuickCompete/issues
-[license-shield]: https://img.shields.io/github/license/Harshjha3006/QuickCompete.svg?style=for-the-badge
-[license-url]: https://github.com/Harshjha3006/QuickCompete/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Harshjha3006/iNotebook-frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/Harshjha3006/iNotebook-frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Harshjha3006/iNotebook-frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/Harshjha3006/iNotebook-frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/Harshjha3006/iNotebook-frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/Harshjha3006/iNotebook-frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Harshjha3006/iNotebook-frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/Harshjha3006/iNotebook-frontend/issues
+[license-shield]: https://img.shields.io/github/license/Harshjha3006/iNotebook-frontend.svg?style=for-the-badge
+[license-url]: https://github.com/Harshjha3006/iNotebook-frontend/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/harsh-jha-3060b022a/
 [product-screenshot]: ./src/img/website%20screenshot.png
@@ -201,4 +203,4 @@ Project Link: [https://github.com/Harshjha3006/QuickCompete](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
-[def]: https://github.com/Harshjha3006/QuickCompete/src/img/demo.gif
+[def]: https://github.com/Harshjha3006/iNotebook-frontend/src/img/demo.gif
